@@ -41,40 +41,45 @@ class D22 : public B2 {
 	void pvf() override { cout << i << endl; }
 };
 
-void f(B2& b1)
-{
+void f(B2& b1){
 	b1.pvf();
 };
 
 int main()
 {
+	cout << "B1" << endl;
 	B1 b1;
 	b1.vf();
 	b1.f();
 	b1.pvf();
 	cout << endl;
 
+	cout << "D1" << endl;
 	D1 d1;
 	d1.vf();
 	d1.f();
 	d1.pvf();
 	cout << endl;
 
+	cout << "B1&" << endl;
 	B1& b1b(d1);
 	b1b.vf();
 	b1b.f();
 	b1b.pvf();
 	cout << endl;
 
+	cout << "D2" << endl;
 	D2 d2;
 	d2.vf();
 	d2.f();
 	d2.pvf();
 	cout << endl;
 
+	cout << "D21" << endl;
 	D21 d21;
 	f(d21);
 
+	cout << "D22" << endl;
 	D22 d22;
 	f(d22);
 
