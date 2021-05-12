@@ -98,7 +98,7 @@ int main()
 	}
 	cout << endl;
 
-	cout << "Felhasznalo altal megadhato ertekek:" << endl;
+	cout << "Felhasznalo altal megadhato ertekek (read_val):" << endl;
 	cout << endl;
 	cout << "s_int = ";
 	read_val(s_int);
@@ -108,6 +108,24 @@ int main()
 	read_val(s_double);
 	cout << "s_string = ";
 	read_val(s_string);
+
+	cout << endl;
+	cout << "Felhasznalo altal megadott ertekek kiiratasa" << endl;
+	cout << "s_int = " << s_int.get() << endl;
+	cout << "s_char = " << s_char.get() << endl;
+	cout << "s_double = " << s_double.get() << endl;
+	cout << "s_string = " << s_string.get() << endl;
+
+	cout << endl;
+	cout << "Felhasznalo altal megadhato ertekek (>>):" << endl;
+	cout << "s_int = ";
+	cin >> s_int;
+	cout << "s_char = ";
+	cin >> s_char;
+	cout << "s_double = ";
+	cin >> s_double;
+	cout << "s_string = ";
+	cin >> s_string;
 
 	cout << endl;
 	cout << "Felhasznalo altal megadott ertekek kiiratasa" << endl;

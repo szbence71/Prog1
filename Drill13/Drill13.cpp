@@ -19,8 +19,11 @@ int main()
 		{
 			grid.add(Point(i,0), Point(i, g_max));
 			grid.add(Point(0,i), Point(g_max, i));
+			//win.attach(grid);
+			//win.wait_for_button();
 		}
 		win.attach(grid);
+		win.wait_for_button();
 
 		// 3. Feladat
 		// piros négyzetek elhelyezése egy átlóban
@@ -44,6 +47,8 @@ int main()
 		win.attach(kep);
 		win.attach(kep2);
 		win.attach(kep3);
+		win.wait_for_button();
+
 
 		// 5. feladat
 		// egy kép végigléptetése mind a 64 négyzeten

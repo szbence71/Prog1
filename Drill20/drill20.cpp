@@ -99,8 +99,8 @@ int main()
 
 	list<int>::iterator serc2;
 	serc2=find(l2.begin(), l2.end(), 27);
-	if(serc != v2.end())
-		cout << "A " << distance(v2.begin(), serc) << ". helyen van" << endl;
+	if(serc2 != l2.end())
+		cout << "A " << distance(l2.begin(), serc2) << ". helyen van" << endl;
 	else
-		cout << "Nem talalhato a keresett elem!";
+		cout << "Nem talalhato a keresett elem!" << endl;
 }

@@ -15,12 +15,14 @@ try {
 	win.wait_for_button();
 	
 	// X tengely
-	Axis xa{Axis::x, Point{20, 230}, 560, 20, "x tengely"};
+	Axis xa{Axis::x, Point{20, 300}, 280, 10, "x tengely"};
 	win.attach(xa);
 	win.wait_for_button();
 	
 	// Y tengely
-	Axis ya{Axis::y, Point{300, 550}, 560, 20, "y tengely"};
+	Axis ya{Axis::y, Point{20, 300}, 280, 10, "y tengely"};
+	ya.set_color(Color::cyan);
+	ya.label.set_color(Color::dark_red);
 	win.attach(ya);
 	win.wait_for_button();
 	
@@ -77,6 +79,8 @@ try {
 	
 	// Kör
 	Circle c {Point{100, 200}, 50};
+	Ellipse e {Point{100, 200}, 50, 100};
+	e.set_color(Color::green);
 	c.set_color(Color::red);
 	Mark m {Point{100, 200}, 'x'};
 	win.wait_for_button();
@@ -85,6 +89,7 @@ try {
 	oss << "screen size: " << x_max() << "*" << y_max() << "; window size: " << win.x_max() << "*" << win.y_max();
 	Text sizes {Point{0, 700}, oss.str()};
 	
+	win.attach(e);
 	win.attach(c);
 	win.attach(m);
 	win.attach(sizes);
